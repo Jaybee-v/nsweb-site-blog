@@ -1,5 +1,8 @@
+'use client'
+import { useSession } from "next-auth/react"
 import React from "react"
 
 export default function Admin() {
-    return <div>page</div>
+    const { data } = useSession()
+    return <div>{JSON.stringify(data)}</div>
 }
