@@ -20,25 +20,27 @@ export const Login = () => {
     }
 
     return (
-        <section>
-            <form
-                action=""
-                onSubmit={handleSubmit}
-                className="p-4 flex flex-col items-center h-44 justify-evenly"
-            >
-                <Input
-                    placeholder="Adresse e-mail"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <Input
-                    type="password"
-                    placeholder="Mot de passe"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <Button className="uppercase">connexion</Button>
-            </form>
-        </section>
+        <div className="h-screen w-screen flex justify-center items-center">
+            <section className="w-96 h-fit place-content-center  rounded-xl bg-gray-800 p-2">
+                <form
+                    action=""
+                    onSubmit={handleSubmit}
+                    className="p-4 flex flex-col items-center h-52 justify-evenly"
+                >
+                    <Input
+                        placeholder="Adresse e-mail"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <Input
+                        type="password"
+                        placeholder="Mot de passe"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <Button className="uppercase">connexion</Button>
+                </form>
+            </section>
+        </div>
     )
 }

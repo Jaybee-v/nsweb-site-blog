@@ -12,7 +12,7 @@ const formSchema = z.object({
 export const Contact = () => {
     return (
         <section className="py-4" id="contact">
-            <div className="w-96 mx-auto pb-8">
+            <div className="px-4 lg:px-0 lg:w-96 mx-auto pb-8">
                 <h2>Pour me contacter:</h2>
                 <p>
                     Pour toute demande, remplissez le formulaire suivant. je
@@ -20,7 +20,7 @@ export const Contact = () => {
                 </p>
             </div>
             <AutoForm
-                className="w-96 mx-auto flex flex-col "
+                className="px-4 lg:px-0 lg:w-96 mx-auto flex flex-col "
                 formSchema={formSchema}
                 fieldConfig={{
                     name: {
@@ -40,6 +40,9 @@ export const Contact = () => {
                     },
                     message: {
                         fieldType: "textarea",
+                        inputProps: {
+                            placeholder: "Votre message",
+                        },
                     },
                 }}
             >
