@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+}
