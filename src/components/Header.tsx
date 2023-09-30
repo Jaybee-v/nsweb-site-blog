@@ -25,7 +25,7 @@ export const Header = () => {
                         <Link href="#projects">Mes Projets</Link>
                     </li>
                     <li className="py-4 px-2 hover:scale-105 transition text-gray-700 hover:text-red-700 hover:underline font-semibold ">
-                        <Link href="/">Mon Blog</Link>
+                        <Link href="/blog">Mon Blog</Link>
                     </li>
                     <li className="py-4 px-2 hover:scale-105 transition text-gray-700 hover:text-red-700 hover:underline font-semibold ">
                         <Link href="#contact">Me Contacter</Link>
