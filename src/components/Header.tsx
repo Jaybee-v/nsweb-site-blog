@@ -15,7 +15,7 @@ export const Header = () => {
                         height={100}
                     />
                 </Link>
-                <ul className="hidden lg:flex w-[60%] justify-evenly">
+                <ul className="hidden md:flex w-[60%] justify-evenly">
                     <li className="py-4 px-2 hover:scale-105 transition text-gray-700 hover:text-red-700 hover:underline font-semibold ">
                         <Link href="/#call-to-action">Accueil</Link>
                     </li>
@@ -32,7 +32,9 @@ export const Header = () => {
                         <Link href="/#contact">Me Contacter</Link>
                     </li>
                 </ul>
-                <HeaderNav />
+                <div className="block md:hidden">
+                    <HeaderNav />
+                </div>
             </nav>
         </header>
     )

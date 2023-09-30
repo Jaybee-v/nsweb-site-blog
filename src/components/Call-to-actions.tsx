@@ -15,10 +15,10 @@ export const CallToActions = () => {
                 <h3 className="text-white px-8 hidden md:block">
                     Vous avez besoin d&apos;accroitre votre présence en ligne ?
                 </h3>
-                <h3 className="text-white px-8 block md:hidden">
+                <h3 className="text-white text-2xl text-center px-8 block md:hidden">
                     Besoin d&apos;une présence en ligne percutante ?
                 </h3>
-                <p className="text-lg px-6 text-center font-semibold text-white">
+                <p className="text-xl px-6 text-center font-semibold text-white">
                     Discutons de votre projet dès maintenant.
                 </p>
                 <Link
