@@ -1,26 +1,28 @@
+"use client"
 
-'use client'
-
-import {  useSession } from "next-auth/react"
-import { useEffect } from "react"
+import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
 import { Login } from "@/components/Admin/Auth/Login"
+import { AdminMenu } from "@/components/Admin/AdminMenu"
 
-export default  function BlogLayout({
+export default function BlogLayout({
     children,
 }: {
     children: React.ReactNode
 }) {
-const router = useRouter()
-    const {data} = useSession()
+    const router = useRouter()
+    const { data } = useSession()
 
     return (
-<div>
-<Login/>
-
-{children}
-</div>
-  
-            )
-        
+        <div>
+            {!data ? (
+                <Login />
+            ) : (
+                <>
+                    <AdminMenu />
+                    <div className="ms-[200px]">{children}</div>
+                </>
+            )}
+        </div>
+    )
 }
