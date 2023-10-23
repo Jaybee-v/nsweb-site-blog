@@ -5,7 +5,6 @@ import CredentialsProvider from "next-auth/providers/credentials"
 const baseUrl = "http://localhost:3000/admin"
 
 export const authOptions: NextAuthOptions = {
-
     providers: [
         CredentialsProvider({
             name: "credentials",
@@ -16,8 +15,7 @@ export const authOptions: NextAuthOptions = {
                     placeholder: "Mot de passe",
                 },
             },
-            
-            
+
             async authorize(credentials, req) {
                 if (!credentials || !credentials.email || !credentials.password)
                     return null
@@ -25,15 +23,13 @@ export const authOptions: NextAuthOptions = {
                     (item) => item.email === credentials.email
                 )
                 console.log(user)
-                
+
                 if (user?.password === credentials.password) return user
                 return null
             },
-            
         }),
     ],
 }
-
 
 const handler = NextAuth(authOptions)
 
